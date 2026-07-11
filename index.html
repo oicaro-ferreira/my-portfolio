@@ -7,34 +7,35 @@
 	<title>Icaro Ferreira - Portfolio</title>
 </head>
 <body>
+	<div class="particulas"></div>
+
+
 	<nav class="navegacao">
 		<ul class="menu">
 			<li>
-				<a href="#inicio">Start</a>
+				<a href="#inicio" class="menu-link">Start</a>
 			</li>
 			<li>
-				<a href="#sobre">About-me</a>
+				<a href="#sobre" class="menu-link">About-me</a>
 			</li>
 			<li>
-				<a href="#projetos">Projects</a>
+				<a href="#projetos" class="menu-link">Projects</a>
 			</li>
 			<li>
-				<a href="#contatos">Contact-Me</a>
+				<a href="#contatos" class="menu-link">Contact</a>
 			</li>
 		</ul>
 	</nav>
 
 	<main id="inicio" class="cabecalho">
-		<div>
 			<img src="./img/icaro.JPEG" alt="Foto de Ícaro Ferreira" class="foto-perfil">
 			<h1>Icaro Ferreira</h1>
-			<p>Front End Developer</p>
-		</div>
+			<p class="cabecalho-sub-titulo">Front End Developer</p>
 	</main>
 
-	<section id="sobre" class="sobre">
+	<section id="sobre" class="projetos">
 		<h2 class="sobre-titulo">About-Me</h2>
-		<div>
+		<div class="sobre-box">
 			<p class="sobre-paragrafo">
 				I'm a Software Developer focused on front-end development and continuous learning.
 				I enjoy building projects that improve my skills and transform ideas into practical solutions.
@@ -49,40 +50,52 @@
 		<div class="projetos-caixa">
 			
 			<div class="projetos-card">
-				<img src="./img/tech.png" alt="tech" class="proejtos-imagem">
-				<h3 class="infor-projetos">Tech Store</h3>
+				<a href="https://oicaro-ferreira.github.io/tech-store/">
+				<img src="./img/tech.png" alt="tech" class="projetos-imagem">
+				</a>
+				<div class="caixa-texto-projeto">
+				<h3 class="info-projetos">Tech Store</h3>
 				<p class="paragrafo-projetos">Tech products e-commerce website featuring smooth product transitions and a modern design tailored for a technology store.</p>
+				</div>
 			</div>
 			<div class="projetos-card">
-				<img src="./img/tech.png" alt="tech" class="proejtos-imagem">
-				<h3 class="infor-projetos">Tech Store</h3>
-				<p class="paragrafo-projetos">Tech products e-commerce website featuring smooth product transitions and a modern design tailored for a technology store.</p>
+				<a href="https://oicaro-ferreira.github.io/ifilms-project/">
+				<img src="./img/ifilms.png" alt="tech" class="projetos-imagem">
+				</a>
+				<div class="caixa-texto-projeto">
+				<h3 class="info-projetos">iFilms</h3>
+				<p class="paragrafo-projetos">iFilms is a sleek landing page showcasing a curated film collection, with smooth transitions, a dynamic background, and interactive design.</p>
+				</div>
 			</div>
 			<div class="projetos-card">
-				<img src="./img/tech.png" alt="tech" class="proejtos-imagem">
-				<h3 class="infor-projetos">Tech Store</h3>
-				<p class="paragrafo-projetos">Tech products e-commerce website featuring smooth product transitions and a modern design tailored for a technology store.</p>
-			</div>
-			<div class="projetos-card">
-				<img src="./img/tech.png" alt="tech" class="proejtos-imagem">
-				<h3 class="infor-projetos">Tech Store</h3>
-				<p class="paragrafo-projetos">Tech products e-commerce website featuring smooth product transitions and a modern design tailored for a technology store.</p>
+				<a href="https://oicaro-ferreira.github.io/black-credit-card/">
+				<img src="./img/007.png" alt="tech" class="projetos-imagem">
+				</a>
+				<div class="caixa-texto-projeto">
+				<h3 class="info-projetos">007 Credit Card</h3>
+				<p class="paragrafo-projetos">A modern and responsive credit card interface built with HTML and CSS, featuring smooth 3D flip animations and an elegant design inspired by premium black credit cards.</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section id="contatos" class="contatos">
 		<h2 class="contatos-titulo">Contact-Me</h2>
-		<form class="formulario-contato" id="formulario">
-			<div class="nome-form">
-			<input placeholder="Name" class="campo-form">
-			</div>
+
+		<form class="formulario-contato" id="formulario" onsubmit="sendWhats(event)">
 			<div class="grupo-form">
-			<textarea class="text-form" placeholder="Type your message"></textarea>
+			<input placeholder="Name" class="campo-form" id="name">
 			</div>
+
+			<div class="grupo-form">
+			<textarea class="campo-form" placeholder="Type your message" rows="6" id="message"></textarea>
+			</div>
+
+			<button type="submit" class="botao-form">Send WhatsApp</button>
 		</form>
+
 	</section>
 
-
+	<script src="script.js"></script>
 </body>
 </html>
